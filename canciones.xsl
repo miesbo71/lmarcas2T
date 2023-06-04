@@ -3,22 +3,23 @@
 	<xsl:template match="/">
 		<html>
 			<head>
-				<link rel="stylesheet" type="text/css" href="canciones2.css"/>	
+				<link rel="stylesheet" type="text/css" href="canciones.css"/>	
 			</head>
 			
 			<body>
 				<h1>Canción: - <xsl:value-of select="cancion/titulo"/></h1>
-				<br/>
+				<br/> 
 				
 				<xsl:for-each select="cancion/letra/estrofa">
 					<xsl:sort select="orden"/>
+					<h3></h3>
 					<xsl:for-each select="verso">
 							<p><xsl:value-of select="."/></p>										
 					</xsl:for-each>
 					<br/>
 				</xsl:for-each>
 				
-				<p>Autor: - <xsl:value-of select="cancion/autor"/></p>
+				<h4>Autor: - <xsl:value-of select="cancion/autor"/></h4>
 					
 			</body>
 		</html>	
