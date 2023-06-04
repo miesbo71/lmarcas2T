@@ -1,0 +1,10 @@
+body { background-color: rgb(202, 52, 52);text-align: center;
+    counter-reset: section 0;
+}
+h1 {color:rgb(255, 72, 0);}
+p {padding-bottom: 12px;}
+p::first-letter { font-size: 150%;font-weight: bold;font-style: italic;}
+p::before {
+    counter-increment: section2;
+    content: "Contador versos: " counter(section) ": ";
+}
